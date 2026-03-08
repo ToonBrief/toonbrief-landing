@@ -1,0 +1,75 @@
+.pricing {
+  padding: 4rem 1.5rem;
+  background: #ffffff;
+}
+
+.pricing-title {
+  font-family: 'Bangers', cursive;
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  color: #E63946;
+  text-align: center;
+  margin: 0 0 3rem;
+  letter-spacing: 0.02em;
+}
+
+.pricing-card {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 2.5rem;
+  background: #ffffff;
+  border: 3px solid #1a1a1a;
+  border-radius: 12px;
+  box-shadow: 6px 6px 0 #FFD166;
+}
+
+.pricing-amount {
+  font-family: 'Bangers', cursive;
+  font-size: 2.5rem;
+  color: #1a1a1a;
+  margin: 0 0 0.5rem;
+  letter-spacing: 0.02em;
+}
+
+.pricing-trial {
+  font-size: 1rem;
+  color: #E63946;
+  margin: 0 0 2rem;
+}
+
+.pricing-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem;
+}
+
+.pricing-feature {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0;
+  font-size: 1rem;
+  color: #1a1a1a;
+}
+
+.pricing-check {
+  color: #E63946;
+  font-weight: bold;
+}
+
+.pricing-btn {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #ffffff;
+  background: #E63946;
+  border: 2px solid #E63946;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.pricing-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(230, 57, 70, 0.4);
+}

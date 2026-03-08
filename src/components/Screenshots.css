@@ -1,0 +1,28 @@
+.screenshots {
+  padding: 4rem 1.5rem;
+  background: #FFD166;
+}
+
+.screenshots-title {
+  font-family: 'Bangers', cursive;
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  color: #E63946;
+  text-align: center;
+  margin: 0 0 3rem;
+  letter-spacing: 0.02em;
+}
+
+.phone-mockup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.phone-screen {
+  width: 300px;
+  height: 600px;
+  background: #e0e0e0;
+  border-radius: 24px;
+  border: 6px solid #1a1a1a;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
