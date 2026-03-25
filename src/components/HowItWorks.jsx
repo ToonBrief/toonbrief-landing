@@ -2,9 +2,9 @@ import React from 'react';
 import './HowItWorks.css';
 
 const steps = [
-  { icon: '📰', title: 'We fetch the latest news' },
-  { icon: '🤖', title: 'AI transforms it into comics' },
-  { icon: '👆', title: 'You swipe & enjoy' },
+  { title: 'We fetch the latest news' },
+  { title: 'AI transforms it into comics' },
+  { title: 'You swipe & enjoy' },
 ];
 
 function HowItWorks() {
@@ -16,11 +16,14 @@ function HowItWorks() {
           <React.Fragment key={step.title}>
             <div className="step">
               <span className="step-number">{index + 1}</span>
-              <span className="step-icon">{step.icon}</span>
               <p className="step-title">{step.title}</p>
             </div>
             {index < steps.length - 1 && (
-              <div className="step-connector" aria-hidden="true">→</div>
+              <div className="step-connector" aria-hidden="true">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#E63946" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </div>
             )}
           </React.Fragment>
         ))}

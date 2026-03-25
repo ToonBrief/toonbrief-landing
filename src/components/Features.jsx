@@ -3,24 +3,24 @@ import './Features.css';
 
 const features = [
   {
-    icon: '⚡',
-    title: 'AI-Powered Comics',
-    description: 'News transformed into engaging visual stories',
+    icon: '🤖',
+    title: 'AI Comics',
+    description: 'Real news transformed into vivid comic strips by advanced AI, making headlines engaging and fun.',
   },
   {
-    icon: '🕐',
-    title: 'Fresh Twice Daily',
-    description: 'Morning and afternoon editions, never miss a beat',
+    icon: '📰',
+    title: 'Fresh Daily',
+    description: 'New editions delivered every day so you never miss what matters in the world.',
   },
   {
-    icon: '🎨',
-    title: 'Multiple Styles',
-    description: 'Classic, Manga, or Vintage - your choice',
+    icon: '🗂️',
+    title: '5 Categories',
+    description: 'Tech, Finance, Politics, Sports & Culture — all your interests covered in one app.',
   },
   {
     icon: '💾',
-    title: 'Save & Share',
-    description: 'Bookmark favorites and share with friends',
+    title: 'Save & Read Later',
+    description: 'Bookmark your favorite strips and build your personal comic news archive.',
   },
 ];
 
@@ -32,7 +32,7 @@ function Features() {
         {features.map((feature) => (
           <div key={feature.title} className="feature-card">
             <span className="feature-icon">{feature.icon}</span>
-            <h3 className="feature-title">{feature.title}</h3>
+            <h3 className="feature-card-title">{feature.title}</h3>
             <p className="feature-description">{feature.description}</p>
           </div>
         ))}

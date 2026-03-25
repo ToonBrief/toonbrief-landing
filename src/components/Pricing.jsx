@@ -2,10 +2,11 @@ import React from 'react';
 import './Pricing.css';
 
 const features = [
-  'AI comics',
-  'All styles',
-  'Daily updates',
-  'Save unlimited',
+  'AI-powered comic strips',
+  'All comic styles',
+  'Daily news editions',
+  'Save unlimited favorites',
+  '5 news categories',
 ];
 
 function Pricing() {
@@ -13,7 +14,7 @@ function Pricing() {
     <section className="pricing">
       <h2 className="pricing-title">Simple Pricing</h2>
       <div className="pricing-card">
-        <p className="pricing-amount">$5.99/month</p>
+        <p className="pricing-amount">$5.99<span className="pricing-period">/month</span></p>
         <p className="pricing-trial">after 3-day free trial</p>
         <ul className="pricing-features">
           {features.map((feature) => (
@@ -22,9 +23,14 @@ function Pricing() {
             </li>
           ))}
         </ul>
-        <button type="button" className="pricing-btn">
+        <a
+          href="https://apps.apple.com/app/toonbrief/id6759260376"
+          className="pricing-btn"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           Start Free Trial
-        </button>
+        </a>
       </div>
     </section>
   );

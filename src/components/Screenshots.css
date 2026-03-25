@@ -1,6 +1,6 @@
 .screenshots {
-  padding: 4rem 1.5rem;
-  background: #FFD166;
+  padding: 5rem 1.5rem;
+  background: #111111;
 }
 
 .screenshots-title {
@@ -9,20 +9,73 @@
   color: #E63946;
   text-align: center;
   margin: 0 0 3rem;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.04em;
 }
 
-.phone-mockup {
+.screenshots-grid {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  gap: 2rem;
+  flex-wrap: wrap;
+  max-width: 960px;
+  margin: 0 auto;
 }
 
-.phone-screen {
-  width: 300px;
-  height: 600px;
-  background: #e0e0e0;
-  border-radius: 24px;
-  border: 6px solid #1a1a1a;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+.phone-frame {
+  position: relative;
+  width: 220px;
+  height: 490px;
+  background: #000;
+  border-radius: 28px;
+  border: 4px solid #333;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.05);
+  flex-shrink: 0;
+}
+
+.phone-notch {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90px;
+  height: 28px;
+  background: #000;
+  border-radius: 0 0 12px 12px;
+  z-index: 2;
+}
+
+.phone-screenshot {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.phone-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, #2d2d2d 0%, #1a1a1a 100%);
+}
+
+.phone-placeholder-text {
+  font-family: 'Bangers', cursive;
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.2);
+  letter-spacing: 0.05em;
+}
+
+@media (max-width: 767px) {
+  .phone-frame {
+    width: 180px;
+    height: 360px;
+  }
+
+  .screenshots-grid {
+    gap: 1rem;
+  }
 }

@@ -1,6 +1,6 @@
 .how-it-works {
-  padding: 4rem 1.5rem;
-  background: #FFD166;
+  padding: 5rem 1.5rem;
+  background: #111111;
 }
 
 .how-it-works-title {
@@ -8,15 +8,15 @@
   font-size: clamp(2rem, 5vw, 2.75rem);
   color: #E63946;
   text-align: center;
-  margin: 0 0 3rem;
-  letter-spacing: 0.02em;
+  margin: 0 0 3.5rem;
+  letter-spacing: 0.04em;
 }
 
 .steps-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0;
+  gap: 1.5rem;
   max-width: 800px;
   margin: 0 auto;
 }
@@ -24,76 +24,62 @@
 @media (min-width: 768px) {
   .steps-container {
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     gap: 0;
   }
 }
 
 .step {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 2rem 1.5rem;
-  background: #ffffff;
-  border: 3px solid #1a1a1a;
-  border-radius: 12px;
-  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.2);
+  padding: 2.5rem 2rem 2rem;
+  background: #1e1e1e;
+  border-radius: 16px;
   flex: 1;
-  min-width: 200px;
+  max-width: 240px;
 }
 
 .step-number {
   position: absolute;
-  top: -12px;
+  top: -18px;
   left: 50%;
   transform: translateX(-50%);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: #E63946;
   color: #ffffff;
   font-family: 'Bangers', cursive;
   font-size: 1.25rem;
-  padding: 0.25rem 0.75rem;
-  border-radius: 20px;
-  border: 2px solid #1a1a1a;
-}
-
-.step {
-  position: relative;
-  margin-top: 1rem;
-}
-
-@media (min-width: 768px) {
-  .step {
-    margin-top: 0;
-  }
-}
-
-.step-icon {
-  font-size: 3rem;
-  margin-bottom: 1rem;
+  border-radius: 50%;
+  letter-spacing: 0.02em;
 }
 
 .step-title {
-  font-size: 1.125rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
   font-weight: 600;
-  color: #1a1a1a;
-  margin: 0;
-  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0.75rem 0 0;
+  line-height: 1.5;
 }
 
 .step-connector {
-  display: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   flex-shrink: 0;
-  margin: 0 0.5rem;
-  align-self: center;
-  font-size: 2rem;
-  color: #1a1a1a;
+  transform: rotate(90deg);
 }
 
 @media (min-width: 768px) {
   .step-connector {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    transform: none;
+    margin: 0 1rem;
   }
 }

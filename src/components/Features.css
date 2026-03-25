@@ -1,6 +1,6 @@
 .features {
-  padding: 4rem 1.5rem;
-  background: #ffffff;
+  padding: 5rem 1.5rem;
+  background: #1a1a1a;
 }
 
 .features-title {
@@ -9,7 +9,7 @@
   color: #E63946;
   text-align: center;
   margin: 0 0 3rem;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.04em;
 }
 
 .features-grid {
@@ -28,37 +28,37 @@
 }
 
 .feature-card {
-  background: #ffffff;
-  border: 3px solid #1a1a1a;
-  border-radius: 12px;
+  background: #2d2d2d;
+  border: none;
+  border-radius: 16px;
   padding: 2rem;
   text-align: center;
-  box-shadow: 4px 4px 0 #FFD166;
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .feature-card:hover {
-  transform: translate(-2px, -2px);
-  box-shadow: 6px 6px 0 #FFD166;
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(230, 57, 70, 0.15);
 }
 
 .feature-icon {
-  font-size: 2.5rem;
+  font-size: 3rem;
   display: block;
   margin-bottom: 1rem;
 }
 
-.feature-title {
+.feature-card-title {
   font-family: 'Bangers', cursive;
   font-size: 1.5rem;
-  color: #1a1a1a;
-  margin: 0 0 0.5rem;
-  letter-spacing: 0.02em;
+  color: #E63946;
+  margin: 0 0 0.75rem;
+  letter-spacing: 0.03em;
 }
 
 .feature-description {
-  font-size: 1rem;
-  color: #1a1a1a;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.8);
   margin: 0;
-  line-height: 1.5;
+  line-height: 1.6;
 }
