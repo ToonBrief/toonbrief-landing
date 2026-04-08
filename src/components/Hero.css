@@ -7,9 +7,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 2rem 1.5rem;
+  padding: 6rem 1.5rem;
   position: relative;
-  overflow: hidden;
 }
 
 .hero::before {
@@ -23,76 +22,6 @@
   z-index: 1;
 }
 
-.hero::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 200%;
-  height: 200%;
-  transform: translate(-50%, -50%);
-  background:
-    repeating-linear-gradient(
-      0deg,
-      transparent,
-      transparent 49.5%,
-      rgba(230, 57, 70, 0.04) 49.5%,
-      rgba(230, 57, 70, 0.04) 50.5%,
-      transparent 50.5%,
-      transparent
-    ),
-    repeating-linear-gradient(
-      90deg,
-      transparent,
-      transparent 49.5%,
-      rgba(230, 57, 70, 0.04) 49.5%,
-      rgba(230, 57, 70, 0.04) 50.5%,
-      transparent 50.5%,
-      transparent
-    );
-  background-size: 60px 60px;
-  pointer-events: none;
-  opacity: 0.5;
-}
-
-.hero-speed-lines {
-  position: absolute;
-  inset: 0;
-  overflow: hidden;
-  pointer-events: none;
-}
-
-.hero-speed-lines::before,
-.hero-speed-lines::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 150%;
-  height: 150%;
-  transform: translate(-50%, -50%);
-}
-
-.hero-speed-lines::before {
-  background:
-    linear-gradient(0deg, transparent 48%, rgba(230, 57, 70, 0.06) 50%, transparent 52%),
-    linear-gradient(30deg, transparent 48%, rgba(230, 57, 70, 0.04) 50%, transparent 52%),
-    linear-gradient(60deg, transparent 48%, rgba(230, 57, 70, 0.04) 50%, transparent 52%),
-    linear-gradient(90deg, transparent 48%, rgba(230, 57, 70, 0.06) 50%, transparent 52%),
-    linear-gradient(120deg, transparent 48%, rgba(230, 57, 70, 0.04) 50%, transparent 52%),
-    linear-gradient(150deg, transparent 48%, rgba(230, 57, 70, 0.04) 50%, transparent 52%);
-}
-
-.hero-speed-lines::after {
-  background:
-    linear-gradient(15deg, transparent 49%, rgba(255, 255, 255, 0.02) 50%, transparent 51%),
-    linear-gradient(45deg, transparent 49%, rgba(255, 255, 255, 0.02) 50%, transparent 51%),
-    linear-gradient(75deg, transparent 49%, rgba(255, 255, 255, 0.02) 50%, transparent 51%),
-    linear-gradient(105deg, transparent 49%, rgba(255, 255, 255, 0.02) 50%, transparent 51%),
-    linear-gradient(135deg, transparent 49%, rgba(255, 255, 255, 0.02) 50%, transparent 51%),
-    linear-gradient(165deg, transparent 49%, rgba(255, 255, 255, 0.02) 50%, transparent 51%);
-}
-
 .hero-content {
   text-align: center;
   max-width: 720px;
@@ -100,42 +29,37 @@
   z-index: 2;
 }
 
+.hero-heading-row {
+  display: inline-flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
 .hero-logo {
-  width: 100px;
-  height: 100px;
-  margin: 0 auto 2rem;
-  display: block;
-  border-radius: 22px;
-  box-shadow: 0 8px 32px rgba(230, 57, 70, 0.3);
+  width: 65px;
+  height: 65px;
+  flex-shrink: 0;
 }
 
 .hero-headline {
-  font-family: 'Bangers', cursive;
-  font-size: clamp(3.5rem, 12vw, 5rem);
-  color: #E63946;
-  margin: 0 0 0.5rem;
-  letter-spacing: 0.06em;
-  line-height: 1;
-  text-shadow: 0 0 40px rgba(230, 57, 70, 0.4), 0 4px 8px rgba(0, 0, 0, 0.5);
-}
-
-.hero-tagline {
-  font-family: 'Inter', sans-serif;
-  font-size: clamp(1.25rem, 3vw, 1.5rem);
+  font-family: 'Space Grotesk', 'Inter', sans-serif;
+  font-size: clamp(2.75rem, 8vw, 4.5rem);
+  font-weight: 700;
   color: #ffffff;
-  margin: 0 0 1.5rem;
-  font-weight: 500;
-  letter-spacing: 0.02em;
+  margin: 0;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  text-align: left;
 }
 
-.hero-subtext {
-  font-size: 1rem;
-  color: rgba(255, 255, 255, 0.7);
-  margin: 0 0 2.5rem;
+.hero-subheadline {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  color: rgba(255, 255, 255, 0.65);
+  margin: 0 0 3rem;
   line-height: 1.6;
-  max-width: 540px;
-  margin-left: auto;
-  margin-right: auto;
+  font-weight: 400;
 }
 
 .hero-buttons {
@@ -143,49 +67,71 @@
   flex-wrap: wrap;
   gap: 1rem;
   justify-content: center;
+  align-items: center;
 }
 
-.hero-btn {
+.hero-appstore-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: #000;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 10px 22px;
+  text-decoration: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.hero-appstore-badge:hover {
+  border-color: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.hero-apple-icon {
+  color: #ffffff;
+  flex-shrink: 0;
+}
+
+.hero-badge-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 1.2;
+}
+
+.hero-badge-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.65rem;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+.hero-badge-store {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.125rem;
+  color: #ffffff;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.hero-btn-ghost {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
   font-family: 'Inter', sans-serif;
-  font-size: 1rem;
-  font-weight: 600;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.7);
   text-decoration: none;
+  padding: 12px 24px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 10px;
-  padding: 14px 28px;
-  transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
-}
-
-.hero-btn:hover {
-  transform: translateY(-2px);
-}
-
-.hero-btn-primary {
-  background: #E63946;
-  color: #ffffff;
-  border: 2px solid #E63946;
-}
-
-.hero-btn-primary:hover {
-  background: #d32f3c;
-  border-color: #d32f3c;
-  box-shadow: 0 8px 30px rgba(230, 57, 70, 0.5);
-}
-
-.hero-btn-outline {
   background: transparent;
-  color: #E63946;
-  border: 2px solid #E63946;
+  transition: color 0.2s, border-color 0.2s;
 }
 
-.hero-btn-outline:hover {
-  background: rgba(230, 57, 70, 0.1);
-  box-shadow: 0 8px 30px rgba(230, 57, 70, 0.2);
-}
-
-.hero-btn-icon {
-  font-size: 1.25rem;
+.hero-btn-ghost:hover {
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.35);
 }

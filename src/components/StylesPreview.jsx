@@ -2,9 +2,13 @@ import React, { useState } from 'react';
 import './StylesPreview.css';
 
 const styles = [
-  { name: 'Classic', description: 'Bold lines, vibrant colors', src: '/images/classic-preview.png' },
-  { name: 'Manga', description: 'Anime-inspired, soft pastels', src: '/images/manga-preview.png' },
-  { name: 'Vintage', description: 'Retro black & white', src: '/images/vintage-preview.png' },
+  { name: 'Classic', description: 'Bold lines, vibrant colors', src: '/images/styles/classic.png' },
+  { name: 'Manga', description: 'Anime-inspired, soft pastels', src: '/images/styles/manga.png' },
+  { name: 'Arcane', description: 'Dark fantasy, rich textures', src: '/images/styles/arcane.png' },
+  { name: 'Neon Cyber', description: 'Futuristic neon glow', src: '/images/styles/neon-cyber.png' },
+  { name: 'Manhwa', description: 'Korean webtoon flair', src: '/images/styles/manhwa.png' },
+  { name: 'Ethereal', description: 'Soft, dreamlike watercolors', src: '/images/styles/ethereal.png' },
+  { name: 'Shadow Ink', description: 'High-contrast ink wash', src: '/images/styles/shadow-ink.png' },
 ];
 
 function StyleCard({ style }) {
@@ -33,7 +37,7 @@ function StyleCard({ style }) {
 function StylesPreview() {
   return (
     <section className="styles-preview">
-      <h2 className="styles-preview-title">Choose Your Style</h2>
+      <h2 className="styles-preview-title">Pick your style.</h2>
       <div className="styles-grid">
         {styles.map((style) => (
           <StyleCard key={style.name} style={style} />

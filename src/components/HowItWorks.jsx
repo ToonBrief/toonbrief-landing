@@ -2,28 +2,24 @@ import React from 'react';
 import './HowItWorks.css';
 
 const steps = [
-  { title: 'We fetch the latest news' },
-  { title: 'AI transforms it into comics' },
-  { title: 'You swipe & enjoy' },
+  { number: '1', text: 'We pull today\'s headlines', sub: 'Top stories from trusted sources, updated twice daily' },
+  { number: '2', text: 'AI draws the comic', sub: 'Each story becomes a vivid 4-panel comic strip' },
+  { number: '3', text: 'You read & save', sub: 'Swipe through, bookmark favorites, pick your style' },
 ];
 
 function HowItWorks() {
   return (
     <section className="how-it-works">
-      <h2 className="how-it-works-title">How It Works</h2>
-      <div className="steps-container">
+      <div className="how-it-works-inner">
         {steps.map((step, index) => (
-          <React.Fragment key={step.title}>
-            <div className="step">
-              <span className="step-number">{index + 1}</span>
-              <p className="step-title">{step.title}</p>
+          <React.Fragment key={step.number}>
+            <div className="hiw-step">
+              <span className="hiw-number">{step.number}</span>
+              <p className="hiw-text">{step.text}</p>
+              <p className="hiw-sub">{step.sub}</p>
             </div>
             {index < steps.length - 1 && (
-              <div className="step-connector" aria-hidden="true">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#E63946" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M5 12h14M12 5l7 7-7 7" />
-                </svg>
-              </div>
+              <span className="hiw-arrow" aria-hidden="true">&rarr;</span>
             )}
           </React.Fragment>
         ))}

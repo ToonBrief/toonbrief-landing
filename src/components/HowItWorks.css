@@ -1,85 +1,74 @@
 .how-it-works {
   padding: 5rem 1.5rem;
-  background: #111111;
+  background: #1a1a1a;
+  border-top: 1px solid rgba(255, 255, 255, 0.04);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
 }
 
-.how-it-works-title {
-  font-family: 'Bangers', cursive;
-  font-size: clamp(2rem, 5vw, 2.75rem);
-  color: #E63946;
-  text-align: center;
-  margin: 0 0 3.5rem;
-  letter-spacing: 0.04em;
-}
-
-.steps-container {
+.how-it-works-inner {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 1.5rem;
-  max-width: 800px;
+  gap: 2rem;
+  max-width: 860px;
   margin: 0 auto;
+  align-items: center;
 }
 
-@media (min-width: 768px) {
-  .steps-container {
+@media (min-width: 640px) {
+  .how-it-works-inner {
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: flex-start;
     gap: 0;
   }
 }
 
-.step {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.hiw-step {
   text-align: center;
-  padding: 2.5rem 2rem 2rem;
-  background: #1e1e1e;
-  border-radius: 16px;
   flex: 1;
-  max-width: 240px;
+  max-width: 220px;
 }
 
-.step-number {
-  position: absolute;
-  top: -18px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #E63946;
-  color: #ffffff;
-  font-family: 'Bangers', cursive;
-  font-size: 1.25rem;
-  border-radius: 50%;
-  letter-spacing: 0.02em;
+.hiw-number {
+  display: block;
+  font-family: 'Space Grotesk', 'Inter', sans-serif;
+  font-size: 4rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.08);
+  line-height: 1;
+  margin-bottom: 0.75rem;
 }
 
-.step-title {
+.hiw-text {
   font-family: 'Inter', sans-serif;
-  font-size: 1rem;
-  font-weight: 600;
-  color: rgba(255, 255, 255, 0.9);
-  margin: 0.75rem 0 0;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0 0 0.5rem;
+  line-height: 1.4;
+}
+
+.hiw-sub {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: #999;
+  margin: 0 auto;
   line-height: 1.5;
+  max-width: 180px;
 }
 
-.step-connector {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.hiw-arrow {
+  display: none;
+  color: #e63946;
+  font-size: 2rem;
+  line-height: 1;
   flex-shrink: 0;
-  transform: rotate(90deg);
+  padding-top: 2.5rem;
 }
 
-@media (min-width: 768px) {
-  .step-connector {
-    transform: none;
-    margin: 0 1rem;
+@media (min-width: 640px) {
+  .hiw-arrow {
+    display: block;
   }
 }
